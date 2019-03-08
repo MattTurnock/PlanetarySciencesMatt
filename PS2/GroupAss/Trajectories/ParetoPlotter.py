@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.ticker import ScalarFormatter
 import pareto
 
 
@@ -29,7 +30,10 @@ plt.xlabel("Duration (days)")
 plt.ylabel("Total DV (km/s)")
 plt.grid(which="both")
 ax = plt.gca()
-ax.set_yscale('log')
+# ax.set_yscale('log')
 ax.set_xscale('log')
+
+for axis in [ax.xaxis, ax.yaxis]:
+    axis.set_major_formatter(ScalarFormatter())
 plt.savefig("paretoFront.pdf")
 plt.show()
