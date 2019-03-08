@@ -1,0 +1,280 @@
+{
+  "AU": {
+    "unit": "km",
+    "val": 149597870.66
+  },
+  "DS": {
+    "unit": "s",
+    "val": 86164.1004
+  },
+  "iDelfi": {
+    "unit": "deg",
+    "val": 98.0
+  },
+  "iENVISAT": {
+    "unit": "deg",
+    "val": 98.5
+  },
+  "iGPS": {
+    "unit": "deg",
+    "val": 55.0
+  },
+  "iISS": {
+    "unit": "deg",
+    "val": 51.9
+  },
+  "J2": {
+    "unit": "",
+    "val": 1082.63E-6
+  },
+  "J22": {
+    "unit":"",
+    "val": 1.82E-6
+  },
+  "RE": {
+    "unit": "km",
+    "val": 6378.136
+  },
+  "RMoon": {
+    "unit": "km",
+    "val": 1738.0
+  },
+  "RVenus": {
+    "unit": "km",
+    "val": 6051.8
+  },
+  "RJupiter": {
+    "unit": "km",
+    "val": 71492.0
+  },
+  "RSaturn": {
+    "unit": "km",
+    "val": 60268.0
+  },
+  "RMars": {
+    "unit": "km",
+    "val": 3397.0
+  },
+  "RSun":{
+    "unit": "km",
+    "val": 6.96033E5
+  },
+  "R_PC":{
+    "unit": "km",
+    "val": 100900
+  },
+  "R_Neptune":{
+    "unit": "km",
+    "val": 24622,
+    "description": "Neptune (volumetric mean) radius"
+  },
+  "rJupiter":{
+    "unit": "AU",
+    "val": 5.20336301
+  },
+  "rMars":{
+    "unit": "AU",
+    "val": 1.52366231
+  },
+  "rMoon":{
+    "unit": "km",
+    "val": 384400
+  },
+  "rEuropa":{
+    "unit": "km",
+    "val": 671.1e3
+  },
+  "rNaiad":{
+  "unit": "km",
+  "val": 48.227E3,
+  "description": "Naiad orbital radius"
+  },
+  "rThalassa":{
+    "unit": "km",
+    "val": 50.075E3,
+    "description": "Thalassa orbital radius"
+  },
+  "rDespina":{
+    "unit": "km",
+    "val": 52.526E3,
+    "description": "Despina orbital radius"
+  },
+  "rGalatea":{
+    "unit": "km",
+    "val": 61.953E3,
+    "description": "Galatea orbital radius"
+  },
+  "rLarissa":{
+    "unit": "km",
+    "val": 73.548E3,
+    "description": "Larissa orbital radius"
+  },
+  "rProteus":{
+    "unit": "km",
+    "val": 117.647E3,
+    "description": "Proteus orbital radius"
+  },
+  "SC":{
+    "unit": "W/m2",
+    "val": 1367.0
+  },
+  "latBaikonur":{
+    "unit": "deg",
+    "val": 45.6
+  },
+  "latDelft":{
+    "unit": "deg",
+    "val": 52.0
+  },
+  "latKSC":{
+    "unit": "deg",
+    "val": 28.5
+  },
+  "latPlesetsk":{
+    "unit": "deg",
+    "val": 62.8
+  },
+  "lonDelft":{
+    "unit": "deg",
+    "val": 4.3
+  },
+  "coeff22":{
+    "unit": "deg",
+    "val": -14.9
+  },
+  "MSun":{
+    "unit": "kg",
+    "val": 1.989e30
+  },
+  "MJupiter": {
+    "unit": "kg",
+    "val": 1.898e27
+  },
+  "muEarth":{
+    "unit": "km ** 3 / (s * s)",
+    "val": 398600.441
+  },
+  "muVenus":{
+    "unit": "m ** 3 / (s * s)",
+    "val": 3.248599E14
+  },
+  "muJupiter":{
+    "unit": "km ** 3 / (s * s)",
+    "val": 1.2669E8
+  },
+  "muSaturn":{
+    "unit": "m ** 3 / (s * s)",
+    "val": 3.79311879E16
+  },
+  "muMars":{
+    "unit": "km ** 3 / (s * s)",
+    "val": 4.2832E4
+  },
+  "muSun":{
+    "unit": "km ** 3 / (s * s)",
+    "val": 1.327178E11
+  },
+  "muMoon":{
+    "unit": "km ** 3 / (s * s)",
+    "val": 4.9048695E3
+  },
+  "M_Neptune":{
+    "unit": "kg",
+    "val": 102.413E24,
+    "description": "Neptune mass"
+  },
+  "M_Naiad":{
+    "unit": "kg",
+    "val": 2E17,
+    "description": "Naiad Mass"
+  },
+  "M_Thalassa":{
+    "unit": "kg",
+    "val": 4E17,
+    "description": "Thalassa mass"
+  },
+  "M_Despina":{
+    "unit": "kg",
+    "val": 2E18,
+    "description": "Despina mass"
+  },
+  "M_Galatea":{
+    "unit": "kg",
+    "val": 4E18,
+    "description": "Galatea mass"
+  },
+  "M_Larissa":{
+    "unit": "kg",
+    "val": 5E18,
+    "description": "Larissa mass"
+  },
+  "M_Proteus":{
+    "unit": "kg",
+    "val": 0.5E20,
+    "description": "Proteus mass"
+  },
+  "TEarth": {
+    "unit": "h",
+    "val": 23.9345
+  },
+  "TVenus": {
+    "unit": "h",
+    "val": -5832.6
+  },
+  "TJupiter": {
+    "unit": "h",
+    "val": 9.9259
+  },
+  "G": {
+    "unit": "m**3/(kg*s*s)",
+    "val": 6.6740831E-11
+  },
+  "h": {
+    "unit": "m**2*kg/(s)",
+    "val": 6.626E-34
+  },
+  "c": {
+    "unit": "m/s",
+    "val": 2.998E8
+  },
+  "k": {
+    "unit": "m**2*kg/(s**2*K)",
+    "val": 1.381E-23
+  },
+  "sigma_SB": {
+    "unit": "J/(m**2*s*K**4)",
+    "val": 5.67036713E-8
+  },
+  "T_PC": {
+    "unit": "K",
+    "val": 3000
+  },
+  "F_Earth": {
+    "unit": "kW/m**2",
+    "val": 1.3608
+  },
+  "m_amu": {
+    "unit": "kg",
+    "val": 1.66053904020E-27
+  },
+  "Mb_Jupiter":{
+    "unit": "G*cm**3",
+    "val": 2.8E29,
+    "description": "Magnetic dipole moment strength of Jupiter"
+  },
+  "mu0":{
+    "unit": "T*m/A",
+    "val": 1.256637061E-6,
+    "description": "Magnetic constant (permeability of free space)"
+  },
+  "m_e":{
+    "unit": "kg",
+    "val": 9.10938356E-31,
+    "description": "Electron rest mass"
+  },
+  "q_e":{
+    "unit": "C",
+    "val": -1.602176620898E-19,
+    "description": "Electron charge"
+  }
+}

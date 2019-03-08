@@ -1,0 +1,29 @@
+=====================================Part D============================================
+(Minimum) mass of planet 1 (in Jupiter masses), Mp1: 0.8364836483648365 
+With K error: 4.4376382362543154e-05 m/s 
+
+(Minimum) mass of planet 2 (in Jupiter masses), Mp2: 4.611661166116612 
+With K error: 0.0004999316190748004 m/s 
+
+=====================================Part G============================================
+Mass of planet 1 (in Jupiter masses), for i=30 deg  Mp1G: 1.6738673867386737 
+With K error: 0.00022991198823518744 m/s 
+
+Mass of planet 2 (in Jupiter masses), for i=30 deg  Mp2G: 9.25092509250925 
+With K error: 0.004453859502973501 m/s 
+
+=====================================Part H============================================
+Semi-major axis of planet 1, a1 (ie D1): 0.5515381433501703 AU 
+
+Semi-major axis of planet 2, a2 (ie D2): 2.2061525734006806 AU 
+
+=====================================Part I============================================
+(Minimum) mass of planet 1 (in Jupiter masses), for 0.8 solar mass star, Mp1_I: 0.7208720872087209 
+With K error: 0.0007223380012462144 m/s 
+
+(Minimum) mass of planet 2 (in Jupiter masses), for 0.8 solar mass star, Mp2_I: 3.9750975097509755 
+With K error: 0.0007372529603486555 m/s 
+
+Semi-major axis of planet 1, for a 0.8 solar mass star, a1_I (ie D1_I): 0.512002657497135 AU 
+
+Semi-major axis of planet 2, for a 0.8 solar mass star, a2_I (ie D2_I): 2.0480106299885397 AU 
