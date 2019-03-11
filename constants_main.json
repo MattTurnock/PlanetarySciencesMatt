@@ -276,5 +276,55 @@
     "unit": "C",
     "val": -1.602176620898E-19,
     "description": "Electron charge"
+  },
+  "h_everest": {
+    "unit": "m",
+    "val": 8848,
+    "description": "Height (ASL) of Everest (Wikipedia)"
+  },
+  "h_olympusMons": {
+    "unit": "m",
+    "val": 21287.4,
+    "description": "Height (Above Mars Datum) of Olympus Mons (Wikipedia)"
+  },
+  "h_hellasBasin": {
+    "unit": "m",
+    "val": -7152,
+    "description": "Height (Above Mars Datum) of Hellas Basin (Wikipedia). Is negative since is a crater"
+  },
+  "h_theiaMons": {
+    "unit": "m",
+    "val": 6000,
+    "description": "Height (Elevation) above Venus of Theia Mons (Wikipedia)"
+  },
+  "rhoCrust_Earth": {
+    "unit": "g/cm**3",
+    "val": 2.83,
+    "description": "Density of Earth continental crust (Wikipedia)"
+  },
+  "rhoCrust_Mars": {
+    "unit": "g/cm**3",
+    "val": 2.9,
+    "description": "Density of Mars continental crust (NASA Goddard Space Flight Center)"
+  },
+  "rhoCrust_Venus": {
+    "unit": "g/cm**3",
+    "val": 2.8,
+    "description": "Density of Venus continental crust (Crustal thickness and support of topography on Venus, Peter B James)"
+  },
+  "rhoMantle_Earth": {
+    "unit": "g/cm**3",
+    "val": 3.3,
+    "description": "Density of Earth mantle"
+  },
+  "rhoMantle_Mars": {
+    "unit": "g/cm**3",
+    "val": 3.44,
+    "description": "Density of Mars mantle (DENSITY OF THE MANTLE OF MARS, Kenneth A. Goettel)"
+  },
+  "rhoMantle_Venus": {
+    "unit": "g/cm**3",
+    "val": 3.3,
+    "description": "Density of Venus mantle (Crustal thickness and support of topography on Venus, Peter B James)"
   }
 }

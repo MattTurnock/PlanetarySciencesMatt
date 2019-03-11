@@ -1,3 +1,9 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CHANGE SOME OF THIS AS ITS JOANAS AND WE WANT OURS  %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Load Data
 clc, clear, close all
 
 Mars = importdata('Mars.txt');
@@ -25,13 +31,13 @@ showing = false;
 % Simulation Parameters
 lonLim = [-180 180 1]; % Plot all longs, with 1 degree precision
 latLim = [-90 90 1]; % Plot all lats, with 1 degree precision
-
-SHbounds = [4 75]; % remove out J0, J1, J2, J3. Also truncate to 75
+% SHbounds = [4 10]; % take out J0,1,2,3. Also truncate to 75
+SHbounds = [4 75]; % take out J0,1,2,3. Also truncate to 75
 Model = struct();
 Model.Re = 3389500; % Mars radius, m
 m = 6.4185e23; % Mars mass, kg
 G = 6.67406e-11; % m3/kg/s^2
-Model.GM = G*m ; %4.282837e13; %m^3/s^2
+Model.GM = G*m ;%4.282837e13; %m^3/s^2
 
 if showing == false
     set(gcf,'visible','off')
@@ -50,9 +56,7 @@ data = model_SH_synthesis_PS(lonLim,latLim,height,SHbounds,Mars,Model);
 %%%%%%% Do part 1a plot %%%%%%%%%%%%%%%
 
 % Plot gravity potential
-doPlot(data.pot, longLabel, latLabel, gravPotLabel, ...
-"Gravity Potential (200m)", titling, "gravPot_200m", matlabPath, ...
-saving, showing)
+doPlot(data.pot, longLabel, latLabel, gravPotLabel, "Gravity Potential (200m)", titling, "gravPot_200m", matlabPath, saving, showing)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Q1b plots - all things for different heights
@@ -67,19 +71,13 @@ data = model_SH_synthesis_PS(lonLim,latLim,height,SHbounds,Mars,Model);
 %%%%%%% Do Q1b plots %%%%%%%%%%%%%%%
 
 % Plot gravity potential
-doPlot(data.pot, longLabel, latLabel, gravPotLabel, ...
-    "Gravity Potential (ASL)", titling, "gravPot_ASL", matlabPath,...
-    saving, showing)
+doPlot(data.pot, longLabel, latLabel, gravPotLabel, "Gravity Potential (ASL)", titling, "gravPot_ASL", matlabPath, saving, showing)
 
 %Plot R-component
-doPlot(data.vec.R, longLabel, latLabel, gravVectorLabel, ...
-    "Gravity Vector, R-component (ASL)", titling, "gravVec_ASL", ...
-    matlabPath, saving, showing)
+doPlot(data.vec.R, longLabel, latLabel, gravVectorLabel, "Gravity Vector, R-component (ASL)", titling, "gravVec_ASL", matlabPath, saving, showing)
 
 %Plot Trr-component
-doPlot(data.ten.Trr, longLabel, latLabel, gravGradTensorLabel, ...
-    "Gravity Gradient Tensor, Trr-component (ASL)", titling, ...
-    "gravTens_ASL", matlabPath, saving, showing)
+doPlot(data.ten.Trr, longLabel, latLabel, gravGradTensorLabel, "Gravity Gradient Tensor, Trr-component (ASL)", titling, "gravTens_ASL", matlabPath, saving, showing)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -94,11 +92,9 @@ for height = heights
     data = model_SH_synthesis_PS(lonLim,latLim,height,SHbounds,Mars,Model);
     
     % Plot figure of R-vector component
-    titleName = sprintf("Gravity Vector, R-component (%s km)", ...
-        num2str(height/1000));
+    titleName = sprintf("Gravity Vector, R-component (%s km)", num2str(height/1000));
     saveName = sprintf("gravVec_%s", num2str(height/1000));
-    doPlot(data.vec.R, longLabel, latLabel, gravVectorLabel, titleName, ...
-        titling, saveName, matlabPath, saving, showing)
+    doPlot(data.vec.R, longLabel, latLabel, gravVectorLabel, titleName, titling, saveName, matlabPath, saving, showing)
 end
 
 
@@ -106,8 +102,7 @@ end
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function doPlot(dataToPlot, xLabel, yLabel, colorBarLabel, Title, ...
-    titling, saveName, savePath, saving, showing)
+function doPlot(dataToPlot, xLabel, yLabel, colorBarLabel, Title, titling, saveName, savePath, saving, showing)
     if showing == false
         set(0,'DefaultFigureVisible','off')
     else
@@ -134,16 +129,13 @@ function doPlot(dataToPlot, xLabel, yLabel, colorBarLabel, Title, ...
 end
 
 
-function [data] = model_SH_synthesis_PS(lonLim,latLim,height,...
-    SHbounds,V,Model)
+function [data] = model_SH_synthesis_PS(lonLim,latLim,height,SHbounds,V,Model)
 % 
 % This function is responsible for the SH synthesis of a given model.
 %
 % input:
-%           - lonLim: longitude limits [min-longitude max-longitude 
-%                     resolution] in degree
-%           - latLim: latitude limits  [min-longitude max-longitude 
-%                     resolution] in degree
+%           - lonLim: longitude limits [min-longitude max-longitude resolution] in degree
+%           - latLim: latitude limits  [min-longitude max-longitude resolution] in degree
 %           - height: height of computation surface in meters [scalar]
 %           - SHbounds: domain of order and degree SH coeff. [nmin nmax]
 %           - V: full set of SHcoefficients constructed by model_SH_analysis.m
@@ -164,14 +156,12 @@ function [data] = model_SH_synthesis_PS(lonLim,latLim,height,...
 %                          [. . .   .  ]
 %                          [nmax mmax Cnm Snm]
 %
-%           - Model: model structure constructed by inputModel.m contains 
-%                    Re and GM values
+%           - Model: model structure constructed by inputModel.m contains Re and GM values
 %                   Model = struct()
 %                   Model.Re = radius of planet in meters
 %                   Model.GM = gravitational constant of planet in m^3/s^2
 %
-% output:   - data structure with gravity potential [m^2/s^2], gravity 
-%             vector [m/s^2 or 1e5*mGal] 
+% output:   - data structure with gravity potential [m^2/s^2], gravity vector [m/s^2 or 1e5*mGal] 
 %             and gravity gradient tensor [1/s^2 or 1e9*Eotvos]
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -238,9 +228,7 @@ V(V(:,1)>nmax|V(:,1)<nmin,:) = [];
 % check is setLeg and V have the same length
 
 if (size(setLeg.PMatrix,1)~=size(V,1))
-    errorString1 = 'Length of Legendre polynomials should have the ';
-    errorString2 = 'same length as the SH-coefficients';
-    error(errorString1 + errorString2)
+    error('Length of Legendre polynomials should have the same length as the SH-coefficients')
 end
 
 % set data matrices

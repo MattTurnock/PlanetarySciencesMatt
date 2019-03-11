@@ -1,0 +1,23 @@
+
+\begin{table}[H]
+    \centering
+    \caption{Caption}
+    \label{tab:my_label}
+    \begin{tabular}{}
+      \\ 
+\hline 
+-29.746031746031775 km	&	-4.666666666666666 km      \\ 
+\hline 
+-7.436507936507943 km	&	-1.1666666666666665 km      \\ 
+\hline 
+7.436507936507943 km	&	1.1666666666666665 km      \\ 
+\hline 
+29.746031746031775 km	&	4.666666666666666 km      \\ 
+\hline 
+74.36507936507944 km	&	11.666666666666664 km      \\ 
+\hline 
+
+    \end{tabular}
+\end{table}
+      \\ 
+\hline 

@@ -142,8 +142,7 @@ function [data] = model_SH_synthesis_PS(lonLim,latLim,height,...
 % input:
 %           - lonLim: longitude limits [min-longitude max-longitude 
 %                     resolution] in degree
-%           - latLim: latitude limits  [min-longitude max-longitude 
-%                     resolution] in degree
+%           - latLim: latitude limits  [min-longitude max-longitude resolution] in degree
 %           - height: height of computation surface in meters [scalar]
 %           - SHbounds: domain of order and degree SH coeff. [nmin nmax]
 %           - V: full set of SHcoefficients constructed by model_SH_analysis.m
@@ -164,14 +163,12 @@ function [data] = model_SH_synthesis_PS(lonLim,latLim,height,...
 %                          [. . .   .  ]
 %                          [nmax mmax Cnm Snm]
 %
-%           - Model: model structure constructed by inputModel.m contains 
-%                    Re and GM values
+%           - Model: model structure constructed by inputModel.m contains Re and GM values
 %                   Model = struct()
 %                   Model.Re = radius of planet in meters
 %                   Model.GM = gravitational constant of planet in m^3/s^2
 %
-% output:   - data structure with gravity potential [m^2/s^2], gravity 
-%             vector [m/s^2 or 1e5*mGal] 
+% output:   - data structure with gravity potential [m^2/s^2], gravity vector [m/s^2 or 1e5*mGal] 
 %             and gravity gradient tensor [1/s^2 or 1e9*Eotvos]
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -238,9 +235,7 @@ V(V(:,1)>nmax|V(:,1)<nmin,:) = [];
 % check is setLeg and V have the same length
 
 if (size(setLeg.PMatrix,1)~=size(V,1))
-    errorString1 = 'Length of Legendre polynomials should have the ';
-    errorString2 = 'same length as the SH-coefficients';
-    error(errorString1 + errorString2)
+    error('Length of Legendre polynomials should have the same length as the SH-coefficients')
 end
 
 % set data matrices
