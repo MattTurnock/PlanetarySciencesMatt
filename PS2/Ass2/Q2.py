@@ -36,22 +36,26 @@ topoData = topoDataFull.iloc[::100, :]
 topoData.loc[:, "Bouguer"] = getBouguerSimple((constants["rhoCrust_Mars"].to(u.Unit("kg/m^3"))).value, topoData.loc[:, "h"])
 
 
+
 fig, ax = plt.subplots()
 if titling: plt.title("Bouguer Plot")
 
-s = ax.scatter(topoData.loc[:, "LON"], topoData.loc[:, "LAT"], c=topoData.loc[:, "Bouguer"], cmap=coolwarm)
+plt.scatter(topoData.loc[:, "LON"], topoData.loc[:, "LAT"], c=topoData.loc[:, "Bouguer"], cmap=coolwarm)
 
 plt.grid()
 plt.ylim(-90,90)
 plt.xlim(0,360)
 plt.xlabel("Longitude [deg]")
 plt.ylabel("Latitude [deg]")
+cbar = plt.colorbar()
+cbar.set_label(r"Bouguer \delta g_B")
 plt.savefig("BouguerPlot.png")
+plt.savefig("BouguerPlot.pdf")
 # plt.show()
 
 fig, ax = plt.subplots()
 if titling: plt.title("Topography Plot")
-s = ax.scatter(topoData.loc[:, "LON"], topoData.loc[:, "LAT"], c=topoData.loc[:, "h"], cmap=coolwarm)
+plt.scatter(topoData.loc[:, "LON"], topoData.loc[:, "LAT"], c=topoData.loc[:, "h"], cmap=coolwarm)
 
 
 plt.grid()
@@ -59,5 +63,8 @@ plt.ylim(-90,90)
 plt.xlim(0,360)
 plt.xlabel("Longitude [deg]")
 plt.ylabel("Latitude [deg]")
+cbar = plt.colorbar()
+cbar.set_label("Elevation [m]")
 plt.savefig("TopographyPlot.png")
+plt.savefig("TopographyPlot.pdf")
 plt.show()
