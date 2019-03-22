@@ -235,11 +235,12 @@
   },
   "c": {
     "unit": "m/s",
-    "val": 2.998E8
+    "val": 299792458
   },
   "k": {
     "unit": "m**2*kg/(s**2*K)",
-    "val": 1.381E-23
+    "val": 1.381E-23,
+    "description": "Boltzmann constant"
   },
   "sigma_SB": {
     "unit": "J/(m**2*s*K**4)",
@@ -271,6 +272,11 @@
     "unit": "kg",
     "val": 9.10938356E-31,
     "description": "Electron rest mass"
+  },
+    "m_p":{
+    "unit": "kg",
+    "val": 1.672621898E-27,
+    "description": "Proton rest mass"
   },
   "q_e":{
     "unit": "C",

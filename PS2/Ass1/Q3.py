@@ -1,15 +1,9 @@
 import numpy as np
 from astropy import units as u
 from json_to_dict import constants
+from PS2.Ass1.ass1_utils import *
 
-def getRhoS(rho_p, aR, rp, outputUnits=u.Unit("kg/m**3")):
-    frac = rho_p**3/aR**3
-    rho_s = (16*frac*rp**3)**(1/3)
-    # print(rho_s.decompose())
-    if outputUnits is not None:
-        rho_s = rho_s.to(outputUnits)
 
-    return rho_s
 
 M_Neptune = constants["M_Neptune"]
 R_Neptune = constants["R_Neptune"]
