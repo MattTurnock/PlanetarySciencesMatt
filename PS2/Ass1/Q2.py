@@ -4,21 +4,8 @@ from mpl_toolkits import mplot3d
 import matplotlib.pyplot as plt
 
 from json_to_dict import constants
+from PS2.Ass1.ass1_utils import *
 
-def getV(E, m, outputUnits=u.m/u.s):
-    V = np.sqrt(2*E/m)
-
-    if outputUnits is not None:
-        V = V.to(outputUnits)
-
-    return V
-
-def getr_lam(m, Vperp, q, B, outputUnits=u.m):
-    r_lam = (m*Vperp)/(np.abs(q)*B)
-    if outputUnits is not None:
-        r_lam = r_lam.to(outputUnits)
-
-    return r_lam
 
 E = 80*u.keV
 m = constants["m_e"]
@@ -37,16 +24,7 @@ print("Gives a velocity of %s" %V)
 #######################################################################################################################
 # Part B
 
-def getXYZ(t, Vperp, Vpar, r_lam):
-    omega = Vperp/r_lam
-    theta = omega*t
 
-    z = r_lam * np.cos(theta)
-    y = r_lam * np.sin(theta)
-
-    x = Vpar * t
-
-    return x,y,z
 
 # V = V.value
 alpha = np.deg2rad(25)

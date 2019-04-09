@@ -3,19 +3,7 @@ from matplotlib import pyplot as plt
 from astropy import units as u
 from json_to_dict import constants
 
-def getBr(Mb, r, theta, outputUnits=u.nT):
-    Br = - 2 * (Mb/r**3) * np.cos(theta)
-    if outputUnits is not None:
-        Br = Br.to(outputUnits)
-
-    return Br
-
-def getBtheta(Mb, r, theta, outputUnits=u.nT):
-    Btheta = (Mb/r**3) * np.cos(theta)
-    if outputUnits is not None:
-        Btheta = Btheta.to(outputUnits)
-
-    return Btheta
+from PS2.Ass1.ass1_utils import *
 
 # def getBr(M, r, theta, mu0=constants["mu0"], outputUnits=u.nT):
 #     Br = (mu0 * M * np.sin(theta))/(2*np.pi*r**3)

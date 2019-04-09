@@ -1,0 +1,171 @@
+{
+  "AU": {
+    "unit": "km",
+    "val": 149597870.66
+  },
+  "DS": {
+    "unit": "s",
+    "val": 86164.1004
+  },
+  "Ldot": {
+    "unit": "deg/sday",
+    "val": 360,
+    "description": "rotation rate of Earth"
+  },
+  "Ve": {
+    "unit": "m/s",
+    "val": 464.0,
+    "description": "rotation speed of the Earth at the equator"
+  },
+  "iDelfiC3": {
+    "unit": "deg",
+    "val": 98.0
+  },
+  "iDelfi-n3Xt": {
+    "unit": "deg",
+    "val": 97.76,
+    "description": "inclination of Delfi-n3Xt, from Wikipedia"
+  },
+  "aDelfi-n3Xt": {
+    "unit": "km",
+    "val": 689.5,
+    "description": "semi-major axis of Delfi-n3Xt, from Wikipedia"
+  },
+  "TDelfi-n3Xt": {
+    "unit": "min",
+    "val": 98.1,
+    "description": "Period of Delfi-n3Xt, from Wikipedia"
+  },
+  "iENVISAT": {
+    "unit": "deg",
+    "val": 98.5
+  },
+  "iGPS": {
+    "unit": "deg",
+    "val": 55.0
+  },
+  "iISS": {
+    "unit": "deg",
+    "val": 51.9
+  },
+  "J2": {
+    "unit": "",
+    "val": 1082.63E-6
+  },
+  "J22": {
+    "unit":"",
+    "val": 1.82E-6
+  },
+  "RE": {
+    "unit": "km",
+    "val": 6378.136
+  },
+  "RMoon": {
+    "unit": "km",
+    "val": 1738.0
+  },
+  "RVenus": {
+    "unit": "km",
+    "val": 6051.8
+  },
+  "RJupiter": {
+    "unit": "km",
+    "val": 71492.0
+  },
+  "RSaturn": {
+    "unit": "km",
+    "val": 60268.0
+  },
+  "RMars": {
+    "unit": "km",
+    "val": 3397.0
+  },
+  "RSun":{
+    "unit": "km",
+    "val": 6.96033E5
+  },
+  "rJupiter":{
+    "unit": "AU",
+    "val": 5.20336301
+  },
+  "rMars":{
+    "unit": "AU",
+    "val": 1.52366231
+  },
+  "rMoon":{
+    "unit": "km",
+    "val": 384400
+  },
+  "SC":{
+    "unit": "W/m2",
+    "val": 1367.0
+  },
+  "latBaikonur":{
+    "unit": "deg",
+    "val": 45.6
+  },
+  "latDelft":{
+    "unit": "deg",
+    "val": 52.0
+  },
+  "latKSC":{
+    "unit": "deg",
+    "val": 28.5
+  },
+  "latPlesetsk":{
+    "unit": "deg",
+    "val": 62.8
+  },
+  "lonDelft":{
+    "unit": "deg",
+    "val": 4.3
+  },
+  "coeff22":{
+    "unit": "deg",
+    "val": -14.9
+  },
+  "muEarth":{
+    "unit": "km ** 3 / (s * s)",
+    "val": 398600.441
+  },
+  "muVenus":{
+    "unit": "m ** 3 / (s * s)",
+    "val": 3.248599E14
+  },
+  "muJupiter":{
+    "unit": "km ** 3 / (s * s)",
+    "val": 1.2669E8
+  },
+  "muSaturn":{
+    "unit": "m ** 3 / (s * s)",
+    "val": 3.79311879E16
+  },
+  "muMars":{
+    "unit": "km ** 3 / (s * s)",
+    "val": 4.2832E4
+  },
+  "muSun":{
+    "unit": "km ** 3 / (s * s)",
+    "val": 1.327178E11
+  },
+  "muMoon":{
+    "unit": "km ** 3 / (s * s)",
+    "val": 4.9048695E3
+  },
+  "TEarth": {
+    "unit": "h",
+    "val": 23.9345
+  },
+  "TVenus": {
+    "unit": "h",
+    "val": -5832.6
+  },
+  "TJupiter": {
+    "unit": "h",
+    "val": 9.9259
+  },
+  "G": {
+    "unit": "m**3/(kg*s*s)",
+    "val": 6.6740831E-11
+  }
+}
