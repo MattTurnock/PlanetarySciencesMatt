@@ -19,7 +19,7 @@ print("Maximum energy usage Emax : %s" %Emax)
 
 #####################################################
 # Primary batteries only
-Espec = 800 *u.Unit("W*hour/kg")
+Espec = 800  *u.Unit("W*hour/kg")
 print("\n====PRIMARY BATTERIES==== \nSpecific energy : %s" %Espec)
 m_batt = Emax/Espec
 print("Total battery (and power system) mass : %s" %m_batt)
