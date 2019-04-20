@@ -9,7 +9,7 @@ from json_to_dict import constants
 # Fractions of time payloads are on. CCD, Spectrum analyser, and everything else
 Pccd_av_frac = 0.5 # Assumes only active at night
 Psa_av_frac = 1.0 # Assumes constantly active
-Pelse_av_frac = 1.0 # Arbitrary activity fraction
+Pelse_av_frac = 0.33 # Arbitrary activity fraction
 
 
 # Mission time
@@ -26,13 +26,13 @@ Pccd_max = 11*u.W
 Psa_max = 0.5*u.W
 
 # Set known values for power distribution
-Ppl_frac = 29.3/100
-Pstruct_frac = 1.3/100
-Ptherm_frac = 1.3/100
-Ppow_frac = 13.3/100
-Pttc_frac = 24/100
-Pproc_frac = 14.7/100
-Padcs_frac = 16/100
+Ppl_frac = 34.375/100
+Pstruct_frac = 1.5625/100
+Ptherm_frac = 1.5625/100
+Ppow_frac = 15.625/100
+Pttc_frac = 28.125/100
+Pproc_frac = 0.0/100
+Padcs_frac = 18.75/100
 
 # Known values for orbit
 Rv = constants["RVenus"]
@@ -84,21 +84,22 @@ print("Operating time : %s" %t_total)
 
 #C refers to fraction of time ttc operates for
 Ptot_av_energy = Ppl_tot_av + Pstruct + Ptherm + Ppow + C*Pttc + Pproc + Padcs
-Etot = (Ptot_av_energy * t_total).to(u.W*u.hour)
-print("Total energy usage Etot (ttc on %s of the time) : %s" %(C, Etot))
+Etot = (Ptot_av_energy * t_total).to(u.kW*u.hour)
+print("With ttc on %s of the time \nAnd instrumentation on %s of the time" %(C, Pelse_av_frac))
+print("Total energy usage Etot : %s" %(Etot))
 
 #####################################################
 # Primary batteries only
 Espec = 800  *u.Unit("W*hour/kg")
 print("\n====PRIMARY BATTERIES==== \nSpecific energy : %s" %Espec)
-m_batt = Etot/Espec
+m_batt = (Etot/Espec).to(u.kg)
 print("Total battery mass (assuming constant Ptot_av use) : %s" %m_batt)
 
 #####################################################
 # Fuel Cells only
 Pspec_FC = 275 * u.W/u.kg
 m_FC = Ptot_max / Pspec_FC
-print("\n====FUEL CELLS==== \nWith specific power %s, mass of fuel cell is : %s" %(Pspec_FC, m_FC))
+print("\n====FUEL CELLS==== \nWith specific power (Lithium Carbon Monoflouride) %s, mass of fuel cell is : %s" %(Pspec_FC, m_FC))
 print("^^ Calculated using Ptot_max")
 
 mdot_fuel = 0.36 *u.Unit("kg * kW**-1 * hour**-1")
@@ -107,6 +108,16 @@ print("With fuel flow %s, fuel mass is : %s" %(mdot_fuel, m_fuel))
 m_FC_total = m_FC + m_fuel
 print("Total system mass is : %s" %m_FC_total)
 
+
+#####################################################
+# Solar panel battery design (for debunking)
+Etot_second = Etot/2
+Espec_second = 125  * u.Unit("W*hour/kg")
+print("\n====SOLAR PANELS==== \nSpecific energy (Li-Ion) : %s" %Espec_second)
+print("Energy to provide is half of total energy (since 4.5 days in day vs 4.5 at night) : %s" %Etot_second)
+
+m_batt_second = (Etot_second/Espec_second).to(u.kg)
+print("Total battery mass : %s" %m_batt_second)
 
 
 
