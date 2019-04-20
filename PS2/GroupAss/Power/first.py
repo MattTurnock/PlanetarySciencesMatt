@@ -9,7 +9,7 @@ from json_to_dict import constants
 # Fractions of time payloads are on. CCD, Spectrum analyser, and everything else
 Pccd_av_frac = 0.5 # Assumes only active at night
 Psa_av_frac = 1.0 # Assumes constantly active
-Pelse_av_frac = 0.5 # Arbitrary activity fraction
+Pelse_av_frac = 1.0 # Arbitrary activity fraction
 
 
 # Mission time
@@ -62,17 +62,18 @@ Pttc = Pttc_frac * Ptot_av
 Pproc = Pproc_frac * Ptot_av
 Padcs = Padcs_frac * Ptot_av
 Psubsystems = Pstruct + Ptherm + Ppow + Pttc + Pproc + Padcs
+print("Maximum payload power : %s" %Ppl_max)
 
 # Find fraction on-time
-print(type(Rv), type(h))
+# print(type(Rv), type(h))
 alpha = np.arccos(Rv / (Rv + h)) # Alpha calculated from orbit geometry
 C = alpha / (np.pi *u.rad) # Refers to fraction of time ttc is on
-print(C)
+# print(C)
 # C = 0.5 # Refers to fraction of time ttc is on
 
 # Calculate maximum possible spacecraft power usage (assumes payload fully operating, but others only sized based on average PL)
 Ptot_max = Psubsystems + Ppl_max
-
+print("Average payload power : %s" %Ppl_tot_av)
 
 #########################################################################################################
 # Power budget calcs and printing for different options
