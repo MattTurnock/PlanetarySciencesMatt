@@ -11,6 +11,7 @@ Pccd_av_frac = 0.5 # Assumes only active at night
 Psa_av_frac = 1.0 # Assumes constantly active
 Pelse_av_frac = 0.33 # Arbitrary activity fraction
 
+h = 500*u.km #Orbit height
 
 # Mission time
 t_total = 9 * u.day
@@ -36,7 +37,7 @@ Padcs_frac = 18.75/100
 
 # Known values for orbit
 Rv = constants["RVenus"]
-h = 500*u.km
+
 
 ######################################################################################
 # Calculate derived parameters / budgets
