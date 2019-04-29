@@ -2,14 +2,14 @@ import numpy as np
 from astropy import units as u
 from json_to_dict import constants
 
-
+fullPrinting=True
 ######################################################################################
 ####### Set adjustable parameters ##########
 
 # Fractions of time payloads are on. CCD, Spectrum analyser, and everything else
 Pccd_av_frac = 0.5 # Assumes only active at night
 Psa_av_frac = 1.0 # Assumes constantly active
-Pelse_av_frac = 1.0 # Arbitrary activity fraction
+Pelse_av_frac = 1/3 # Arbitrary activity fraction
 
 
 # Mission time
@@ -25,13 +25,14 @@ Pmag_max = 4.25*u.W
 Pccd_max = 11*u.W
 Psa_max = 0.5*u.W
 
+
 # Set known values for power distribution
 Ppl_frac = 29.3/100
 Pstruct_frac = 1.3/100
 Ptherm_frac = 1.3/100
 Ppow_frac = 13.3/100
 Pttc_frac = 24/100
-Pproc_frac = 14.7/100
+Pproc_frac = 0.0#14.7/100
 Padcs_frac = 16/100
 
 # Known values for orbit
@@ -62,6 +63,9 @@ Pttc = Pttc_frac * Ptot_av
 Pproc = Pproc_frac * Ptot_av
 Padcs = Padcs_frac * Ptot_av
 Psubsystems = Pstruct + Ptherm + Ppow + Pttc + Pproc + Padcs
+
+print(Pttc)
+
 print("Maximum payload power : %s" %Ppl_max)
 
 # Find fraction on-time
@@ -84,6 +88,7 @@ print("Operating time : %s" %t_total)
 
 #C refers to fraction of time ttc operates for
 Ptot_av_energy = Ppl_tot_av + Pstruct + Ptherm + Ppow + C*Pttc + Pproc + Padcs
+print(Ptot_av_energy)
 Etot = (Ptot_av_energy * t_total).to(u.W*u.hour)
 print("Total energy usage Etot (ttc on %s of the time) : %s" %(C, Etot))
 
