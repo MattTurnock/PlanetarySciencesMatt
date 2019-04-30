@@ -7,6 +7,11 @@
     "unit": "s",
     "val": 86164.1004
   },
+  "F0": {
+    "unit": "kW/m^2",
+    "val": 1.3608,
+    "description": "Solar constant - energy per area at 1AU"
+  },
   "iDelfi": {
     "unit": "deg",
     "val": 98.0
@@ -30,6 +35,11 @@
   "J22": {
     "unit":"",
     "val": 1.82E-6
+  },
+  "N_A": {
+    "unit": "mol^-1",
+    "val": 6.02214085774E23,
+    "description": "Avagadro's constant"
   },
   "RE": {
     "unit": "km",
@@ -244,7 +254,8 @@
   },
   "sigma_SB": {
     "unit": "J/(m**2*s*K**4)",
-    "val": 5.67036713E-8
+    "val": 5.67036713E-8,
+    "description": "Stefan-Boltzmann constant"
   },
   "T_PC": {
     "unit": "K",
